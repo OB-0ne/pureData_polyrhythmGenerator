@@ -1,0 +1,126 @@
+#N canvas 185 124 1257 778 12;
+#X floatatom 1142 111 5 20 500 2 BPM - -;
+#X obj 1040 206 s metro_bang;
+#X obj 1074 13 MIDI_DrumMachine;
+#X obj 1040 140 metro_bpm, f 15;
+#X obj 1114 180 s metro_ms;
+#X obj 1142 53 loadbang;
+#X msg 1142 77 120;
+#X obj 19 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 19 54 s main_t;
+#X obj 1040 96 r main_t;
+#X obj 616 319 time_signature;
+#X obj 616 264 r main_t;
+#X obj 663 289 r metro_ms;
+#X msg 711 232 7 8;
+#X obj 857 554 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X obj 616 350 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 566 490 time_signature;
+#X obj 566 435 r main_t;
+#X obj 613 460 r metro_ms;
+#X obj 566 521 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 661 403 11 8;
+#X obj 677 594 time_signature;
+#X obj 677 539 r main_t;
+#X obj 724 564 r metro_ms;
+#X obj 677 625 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 772 507 23 16;
+#X obj 858 582 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
+#X obj 858 609 hradio 15 1 0 23 empty empty empty 0 -8 0 10 -262144
+-1 -1 4;
+#X obj 857 348 time_signature;
+#X obj 857 293 r main_t;
+#X obj 904 318 r metro_ms;
+#X obj 856 528 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 857 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 952 261 4 4;
+#X text 938 526 4 4;
+#X text 975 553 7 8;
+#X text 1034 580 11 8;
+#X text 1163 586 23 16;
+#X obj 707 194 loadbang;
+#X obj 951 222 loadbang;
+#X obj 663 362 loadbang;
+#X obj 769 472 loadbang;
+#X obj 138 510 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
+-1 -1 5;
+#X obj 139 538 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 139 565 hradio 15 1 0 23 empty empty empty 0 -8 0 10 -262144
+-1 -1 20;
+#X obj 137 484 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 219 482 4 4;
+#X text 256 509 7 8;
+#X text 315 536 11 8;
+#X text 444 522 23 16;
+#X obj 87 228 r metro_bang;
+#X obj 100 420 % 4;
+#X obj 92 456 % 7;
+#X obj 76 494 % 11;
+#X obj 65 539 % 23;
+#X floatatom 87 342 5 0 0 0 - - -;
+#X obj 105 261 r main_t;
+#X obj 63 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 139 307 + 1;
+#X obj 87 307 f 0;
+#X obj 103 382 / 2;
+#X text 93 617 How Ableton's Time Signature work with the set BMP and
+time signature (4/4 in this case);
+#X obj 27 510 * 2;
+#X connect 0 0 3 1;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 10 0 15 0;
+#X connect 10 1 14 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 1;
+#X connect 13 0 10 2;
+#X connect 16 0 19 0;
+#X connect 16 1 26 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 1;
+#X connect 20 0 16 2;
+#X connect 21 0 24 0;
+#X connect 21 1 27 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 1;
+#X connect 25 0 21 2;
+#X connect 28 0 32 0;
+#X connect 28 1 31 0;
+#X connect 29 0 28 0;
+#X connect 30 0 28 1;
+#X connect 33 0 28 2;
+#X connect 38 0 13 0;
+#X connect 39 0 33 0;
+#X connect 40 0 20 0;
+#X connect 41 0 25 0;
+#X connect 50 0 59 0;
+#X connect 50 0 57 0;
+#X connect 51 0 45 0;
+#X connect 52 0 42 0;
+#X connect 53 0 43 0;
+#X connect 54 0 44 0;
+#X connect 55 0 52 0;
+#X connect 55 0 53 0;
+#X connect 55 0 62 0;
+#X connect 55 0 60 0;
+#X connect 56 0 59 1;
+#X connect 58 0 59 1;
+#X connect 59 0 58 0;
+#X connect 59 0 55 0;
+#X connect 60 0 51 0;
+#X connect 62 0 54 0;

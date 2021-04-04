@@ -1,0 +1,27 @@
+#N canvas 182 174 432 518 12;
+#X msg 111 226 tempo \$1 permin;
+#X obj 111 252 metro;
+#X obj 60 156 inlet;
+#X obj 111 156 inlet;
+#X text 17 68 Receives calls for the durm machine. Works well for the
+custom Andromeda Blackhole Drum Kit on AbletonLive. The random generator
+calls the same instrumnent's similar samples to avoid monotone.;
+#X text 325 30 Omkar Bhatt;
+#X text 332 49 03/29/2021;
+#X text 318 11 Metro by BPM;
+#X obj 111 304 outlet;
+#X text 55 329 bangs by metro;
+#X obj 260 369 outlet;
+#X text 225 395 metro in ms;
+#X obj 260 249 t b f;
+#X msg 260 289 60000;
+#X obj 260 332 /, f 5;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 3 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 1;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;

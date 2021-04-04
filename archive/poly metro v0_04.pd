@@ -1,0 +1,32 @@
+#N canvas 918 208 757 778 12;
+#X floatatom 662 125 5 20 500 2 BPM - -;
+#X obj 560 220 s metro_bang;
+#X obj 594 27 MIDI_DrumMachine;
+#X obj 560 154 metro_bpm, f 15;
+#X obj 620 194 s metro_ms;
+#X obj 662 67 loadbang;
+#X msg 662 91 120;
+#X obj 19 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 19 54 s main_t;
+#X obj 560 110 r main_t;
+#X obj 210 307 time_signature;
+#X obj 136 251 r main_t;
+#X obj 233 219 r metro_ms;
+#X msg 324 259 7 8;
+#X obj 305 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 164 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 3 1;
+#X connect 3 0 1 0;
+#X connect 3 1 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 10 0 15 0;
+#X connect 10 1 14 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 1;
+#X connect 13 0 10 2;
